@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>CATS Trailheads</title>
+  <!--
+  <link rel="stylesheet" href="/maps/ol/css/ol.css">
+  -->
+  <link rel="stylesheet" href="../assets/css/ol.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CATS.css">
+  <link rel="stylesheet" href="../jq/jquery-ui.css">
+</head>
+<body>
+  
+  <div id="js-map" class="map">
+    <div class="progress">
+      <div id="js-progress-bar" class="progress-bar progress-bar-info"></div>
+    </div>
+  </div>
+  
+  <div class="pane">
+    <h3>Champlain Area Trails (CATS)</h3>
+    <hr />
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="js-search-name">Search by trail name:</label>
+        <input id="js-search-name" type="search" 
+          class="form-control" placeholder="Enter trail name...">
+      </div>
+    </form>
+    
+    <hr />
+    <p>Or, toggle buttons to refine search, 
+    e.g. easy <em>or</em> moderate, Overlook <em>and</em> Bike</p>
+    <ul id="js-diff-buttons" class="btn-list list-inline">
+      <li><button type="button" class="btn btn-success" id="js-btn-easy">easy</button></li>
+      <li><button type="button" class="btn btn-success" id="js-btn-mod">moderate</button></li>
+      <li><button type="button" class="btn btn-success" id="js-btn-hard">difficult</button></li>
+    </ul>
+    
+    <hr />
+    <ul id="js-notes-buttons" class="btn-list list-inline">
+      <li><button type="button" class="btn btn-success" id="js-btn-alluses">All uses</button></li>
+      <li><button type="button" class="btn btn-default" id="js-btn-olook">Overlook</button></li>
+      <li><button type="button" class="btn btn-default" id="js-btn-hacc">Handicap Accessible</button></li>
+      <li><button type="button" class="btn btn-default" id="js-btn-bike">Bike</button></li>
+      <li><button type="button" class="btn btn-default" id="js-btn-xcski">XC-Ski</button></li>
+    </ul>
+    
+    <hr />
+    <p title="Click Aerial, Outdoors, Terrain or Map buttons">
+      Choose basemap at right.</p>
+    <!--
+    <p>Blend Aerial and Map</p>
+    <p><span id="js-sat-opacity">100%</span> OpenStreetMap</p>
+    <div id="js-slider"></div>
+    -->
+    <hr />
+    <p>Click on red dots for trail info.</p>
+    <hr />
+    
+    <!--
+    <hr />
+    <p>Debugging only:</p>
+    Zoom value: <span id="js-zoom-val"></span><br />
+    <span id="js-diff-val-elem">js-diff-val-elem</span><br />
+    <span id="js-notes-val-elem">js-notes-val-elem</span><br />
+    
+    <span id="js-diff-val-easy">js-diff-val-easy</span><br />
+    <span id="js-diff-val-mod">js-diff-val-mod</span><br />
+    <span id="js-diff-val-hard">js-diff-val-hard</span><br />
+    
+    <span id="js-notes-val-hike">js-notes-val-hike</span><br />
+    <span id="js-notes-val-olook">js-notes-val-olook</span><br />
+    <span id="js-notes-val-hacc">js-notes-val-hacc</span><br />
+    <span id="js-notes-val-bike">js-notes-val-bike</span><br />
+    <span id="js-notes-val-xcski">js-notes-val-xcski</span><br />
+    -->    
+  </div>
+    
+  <div id="js-overlay" class="overlay">
+    <ul class="list-unstyled">
+      <li><strong id="js-thid"></strong></li>
+      <li><span id="js-trails"></span></li>
+      <li><span id="js-photo"></span></li>
+    </ul>
+  </div>
+  
+
+  <!--
+  <script src="/maps/ol/build/ol.js"></script>
+  -->
+  <script src="../assets/js/ol-debug.js"></script>
+  <script src="../jq/jquery.js"></script>
+  <script src="../jq/jquery-ui.js"></script>
+  <script src="CATS_trails.js"></script>
+  <script src="CATS.js"></script>
+</body>
+</html>
